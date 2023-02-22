@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Oswald:wght@500&family=Roboto:ital,wght@0,100;1,400&display=swap');
+
+:root{
+    --primary-color: rgb(156, 137, 240);
+}
+*, ::before, ::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.showcase{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+.screen{
+    height: 50px;
+    background-color: #e6e3e3;
+    width: 100%;
+    margin-top: 10px;
+    transform: rotateX(-45deg);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.7);
+}
+.seat{
+    height: 15px;
+    width: 15px;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border: 1px solid black;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.5);
+}
+.seat.na{
+    background-color: gray;
+}
+.seat.selected{
+    background-color: rgb(230, 227, 227);
+}
+.seat.occupied{
+    background-color: brown;
+}
+.seats{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.seats .row .seat:nth-of-type(2){
+    margin-right: 20px;
+}
+.seats .row .seat:nth-last-of-type(2){
+    margin-left: 20px;
+}
+.seats .row{
+    display: flex;
+}
+.seats .row .seat{
+    margin: 0 3px;
+}
+.seats .row .seat:not(.occupied){
+    cursor: pointer;
+}
+.summary{
+    margin-top: 10px;
+    text-align: center;
+}
